@@ -1,0 +1,34 @@
+﻿
+Account:BankAccount
+
+Wells Fargo
+-----------------
+Credit		Debit
+=========== ===========
+    1000.00	      49.27
+
+Available Amount
+-----------------
+Credit		Debit
+=========== ===========
+      50.00	      49.27
+
+Budget Held Amount
+-----------------
+Credit		Debit		Balance
+=========== =========== ===========
+      50.00	      49.27	       0.73
+
+Windstream:Creditor
+-----------------------
+Credit		Debit		Balance
+PAY			Bill Amount 
+=========== ===========	===========
+      50.00	      49.27	       0.73
+
+HealthCare Budget
+-----------------
+Credit		Debit
+=========== ===========
+      50.00	       0.00
+

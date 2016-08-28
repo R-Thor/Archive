@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaScriptBox2", "JavaScriptBox2\JavaScriptBox2.csproj", "{07D85C41-07A5-48F5-B7B4-E30EC248C753}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://localhost:8080/tfs/sandbox
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = JavaScriptBox2\\JavaScriptBox2.csproj
+		SccProjectName1 = JavaScriptBox2
+		SccLocalPath1 = JavaScriptBox2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07D85C41-07A5-48F5-B7B4-E30EC248C753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07D85C41-07A5-48F5-B7B4-E30EC248C753}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07D85C41-07A5-48F5-B7B4-E30EC248C753}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07D85C41-07A5-48F5-B7B4-E30EC248C753}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

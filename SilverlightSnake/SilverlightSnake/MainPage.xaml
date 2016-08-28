@@ -1,0 +1,107 @@
+﻿<UserControl 
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  
+    x:Class="SilverlightSnake.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition  Height="302*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <sdk:Label Name="PauseLabel" Visibility="Collapsed" Grid.Row="1" VerticalAlignment="center" HorizontalAlignment="Center" Background="Black" Foreground="White" FontWeight="ExtraBold" FontSize="24">Hit Any key to Resume</sdk:Label>
+        <sdk:Label Name="StartLabel" Visibility="Collapsed" Grid.Row="1" VerticalAlignment="center" HorizontalAlignment="Center" Background="Black" Foreground="White" FontWeight="ExtraBold" FontSize="24"></sdk:Label>
+        <Viewbox Name="PlayerNameViewbox" Grid.Row="1" Visibility="Collapsed">
+            <Border Name="PlayerNameBorder" BorderBrush="Black" BorderThickness="1">
+                <StackPanel>
+                    <sdk:Label>Player Name</sdk:Label>
+                    <TextBox Name="PlayerNameTextBox" Text="Player 1"/>
+                    <Button Content="Save" Click="Button_Click"></Button>
+                </StackPanel>
+            </Border>
+        </Viewbox>
+        <Viewbox Name="GameViewbox"  Grid.Row="1" Visibility="Visible" VerticalAlignment="Top">
+            <Border Name="GameBorder" BorderBrush="Black" BorderThickness="1" />
+        </Viewbox>
+        <Grid Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75*"></ColumnDefinition>
+                <ColumnDefinition Width="75*"></ColumnDefinition>
+                <ColumnDefinition Width="75*"></ColumnDefinition>
+                <ColumnDefinition Width="75*"></ColumnDefinition>
+                <ColumnDefinition Width="75*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <sdk:Label Grid.Column="0" Name="ScoreLabelLabel" Padding="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center">Score:</sdk:Label>
+            <sdk:Label Grid.Column="1" Name="ScoreLabel" Padding="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center">0000000</sdk:Label>
+            <Button Grid.Column="2" Content="Start Game" HorizontalAlignment="Stretch" Name="StartButton" VerticalAlignment="Top" Click="StartButton_Click" Grid.ColumnSpan="2" Margin="81,-3,3,0" />
+        </Grid>
+        <Viewbox Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Top">
+            <Grid Height="Auto" Width="Auto">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="25*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <sdk:Label Content="HIGH SCORES" HorizontalAlignment="Center" FontSize="30" Grid.ColumnSpan="4" Padding="0,0,0,0"></sdk:Label>
+                <!--<ItemsControl Grid.Row="1" Name="GameScoreScoreItemsControl" ItemsSource="{Binding}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <Label Content="{Binding PlayerName}"></Label>
+                            <Label Content="{Binding PlayerScore}"></Label>
+                        </StackPanel>
+
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            <sdk:DataGrid />
+            </ItemsControl>-->
+                    <sdk:DataGrid Name="ScoresDataGrid" 
+                      AutoGenerateColumns="False" 
+                      Grid.Row="1" 
+                      HorizontalAlignment="Center" 
+                      VerticalAlignment="Top" 
+                      ItemsSource="{Binding}" 
+                      CanUserReorderColumns="False" 
+                      CanUserResizeColumns="False"
+                      CanUserSortColumns="False"
+                      IsEnabled="False"    
+                      IsReadOnly="True"
+                      LoadingRow="ScoresDataGrid_LoadingRow"
+                      >
+                    <!--CanUserResizeRows="False"
+                    CanUserAddRows="False" 
+                    CanUserDeleteRows="False"-->
+
+                    <sdk:DataGrid.Columns>
+                        <sdk:DataGridTextColumn Header="Name" Binding="{Binding PlayerName}"></sdk:DataGridTextColumn>
+                        <sdk:DataGridTextColumn Header="Score" Binding="{Binding PlayerScore}"></sdk:DataGridTextColumn>
+                            <sdk:DataGridTextColumn Header="Date" Binding="{Binding Date}"></sdk:DataGridTextColumn>
+                    </sdk:DataGrid.Columns>
+
+                </sdk:DataGrid>
+            </Grid>
+        </Viewbox>
+        <!--<Frame Grid.Row="1" Width="200" Height="200">
+            <Grid>
+                <Button Content="l;sdkl;ksdl;" Width="100" Height="25"/>
+            </Grid>
+        </Frame>-->
+        <!--<Popup Name="PlayerPopup" Width="200" Height="200" IsOpen="True" Grid.Row="1" PlacementTarget="{Binding ElementName = GameViewbox}" Placement="Center">
+            <Grid>
+                <Button Content="l;sdkl;ksdl;" Width="100" Height="25"/>
+            </Grid>
+        </Popup>-->
+
+        <!--<Popup Name="Score">
+
+        </Popup>-->
+    </Grid>
+</UserControl>

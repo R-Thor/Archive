@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService3", "WcfService3\WcfService3.csproj", "{F8ADEFA6-DAF8-4380-A77D-FBC8B7F79FAC}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://localhost:8080/tfs/test
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WcfService3\\WcfService3.csproj
+		SccProjectName1 = WcfService3
+		SccLocalPath1 = WcfService3
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8ADEFA6-DAF8-4380-A77D-FBC8B7F79FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8ADEFA6-DAF8-4380-A77D-FBC8B7F79FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8ADEFA6-DAF8-4380-A77D-FBC8B7F79FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8ADEFA6-DAF8-4380-A77D-FBC8B7F79FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

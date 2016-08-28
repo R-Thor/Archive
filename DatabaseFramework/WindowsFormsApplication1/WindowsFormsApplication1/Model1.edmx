@@ -1,0 +1,1284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SandBoxModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="SandBoxModelStoreContainer">
+          <EntitySet Name="Entity" EntityType="SandBoxModel.Store.Entity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ExampleTable2" EntityType="SandBoxModel.Store.ExampleTable2" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ReplacementTest" EntityType="SandBoxModel.Store.ReplacementTest" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TriggerTestLog" EntityType="SandBoxModel.Store.TriggerTestLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TriggerTestTop" EntityType="SandBoxModel.Store.TriggerTestTop" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CodeSection" EntityType="SandBoxModel.Store.CodeSection" store:Type="Tables" Schema="DBOM" />
+          <EntitySet Name="Database" EntityType="SandBoxModel.Store.Database" store:Type="Tables" Schema="DBOM" />
+          <EntitySet Name="Object" EntityType="SandBoxModel.Store.Object" store:Type="Tables" Schema="DBOM" />
+          <EntitySet Name="Object2" EntityType="SandBoxModel.Store.Object2" store:Type="Tables" Schema="DBOM" />
+          <EntitySet Name="Project" EntityType="SandBoxModel.Store.Project" store:Type="Tables" Schema="DBOM" />
+          <EntitySet Name="Schema" EntityType="SandBoxModel.Store.Schema" store:Type="Tables" Schema="DBOM" />
+          <EntitySet Name="Source" EntityType="SandBoxModel.Store.Source" store:Type="Tables" Schema="DBOM" />
+          <EntitySet Name="Item" EntityType="SandBoxModel.Store.Item" store:Type="Tables" Schema="ProjectManagement" />
+          <EntitySet Name="Item_ItemType" EntityType="SandBoxModel.Store.Item_ItemType" store:Type="Tables" Schema="ProjectManagement" />
+          <EntitySet Name="ItemContext" EntityType="SandBoxModel.Store.ItemContext" store:Type="Tables" Schema="ProjectManagement" />
+          <EntitySet Name="ItemType" EntityType="SandBoxModel.Store.ItemType" store:Type="Tables" Schema="ProjectManagement" />
+          <EntitySet Name="Project1" EntityType="SandBoxModel.Store.Project1" store:Type="Tables" Schema="ProjectManagement" Table="Project" />
+          <EntitySet Name="DataTableDefinition" EntityType="SandBoxModel.Store.DataTableDefinition" store:Type="Tables" Schema="Template" />
+          <EntitySet Name="TableDefinition" EntityType="SandBoxModel.Store.TableDefinition" store:Type="Tables" Schema="Template" />
+          <EntitySet Name="TypeTableDefinition" EntityType="SandBoxModel.Store.TypeTableDefinition" store:Type="Tables" Schema="Template" />
+          <EntitySet Name="Entities" EntityType="SandBoxModel.Store.Entities" store:Type="Views" store:Schema="dbo" store:Name="Entities">
+            <DefiningQuery>SELECT 
+      [Entities].[EntityID] AS [EntityID], 
+      [Entities].[EntityGUID] AS [EntityGUID], 
+      [Entities].[Data] AS [Data], 
+      [Entities].[CreateServerDateTimeStamp] AS [CreateServerDateTimeStamp]
+      FROM [dbo].[Entities] AS [Entities]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Entities_Last100" EntityType="SandBoxModel.Store.Entities_Last100" store:Type="Views" store:Schema="dbo" store:Name="Entities_Last100">
+            <DefiningQuery>SELECT 
+      [Entities_Last100].[EntityID] AS [EntityID], 
+      [Entities_Last100].[EntityGUID] AS [EntityGUID], 
+      [Entities_Last100].[Data] AS [Data], 
+      [Entities_Last100].[CreateUTCDateTimeStamp] AS [CreateUTCDateTimeStamp], 
+      [Entities_Last100].[CreateServerDateTimeStamp] AS [CreateServerDateTimeStamp], 
+      [Entities_Last100].[CreateClientDateTimeStamp] AS [CreateClientDateTimeStamp], 
+      [Entities_Last100].[TimeStamp] AS [TimeStamp], 
+      [Entities_Last100].[Order] AS [Order]
+      FROM [dbo].[Entities_Last100] AS [Entities_Last100]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Item_ItemType_Item" Association="SandBoxModel.Store.FK_Item_ItemType_Item">
+            <End Role="Item" EntitySet="Item" />
+            <End Role="Item_ItemType" EntitySet="Item_ItemType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Item_ItemType_ItemType" Association="SandBoxModel.Store.FK_Item_ItemType_ItemType">
+            <End Role="ItemType" EntitySet="ItemType" />
+            <End Role="Item_ItemType" EntitySet="Item_ItemType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Object_Database" Association="SandBoxModel.Store.FK_Object_Database">
+            <End Role="Database" EntitySet="Database" />
+            <End Role="Object" EntitySet="Object" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Object_Schema" Association="SandBoxModel.Store.FK_Object_Schema">
+            <End Role="Schema" EntitySet="Schema" />
+            <End Role="Object" EntitySet="Object" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Project_Item" Association="SandBoxModel.Store.FK_Project_Item">
+            <End Role="Item" EntitySet="Item" />
+            <End Role="Project1" EntitySet="Project1" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReplacementTest_ReplacementTest" Association="SandBoxModel.Store.FK_ReplacementTest_ReplacementTest">
+            <End Role="ReplacementTest" EntitySet="ReplacementTest" />
+            <End Role="ReplacementTest1" EntitySet="ReplacementTest" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TableDefinition_Replacement" Association="SandBoxModel.Store.FK_TableDefinition_Replacement">
+            <End Role="TableDefinition" EntitySet="TableDefinition" />
+            <End Role="TableDefinition1" EntitySet="TableDefinition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TemplateDataTableDefinition_Replacement" Association="SandBoxModel.Store.FK_TemplateDataTableDefinition_Replacement">
+            <End Role="DataTableDefinition" EntitySet="DataTableDefinition" />
+            <End Role="DataTableDefinition1" EntitySet="DataTableDefinition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TypeTableDefinition_Replacement" Association="SandBoxModel.Store.FK_TypeTableDefinition_Replacement">
+            <End Role="TypeTableDefinition" EntitySet="TypeTableDefinition" />
+            <End Role="TypeTableDefinition1" EntitySet="TypeTableDefinition" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Entity">
+          <Key>
+            <PropertyRef Name="EntityID" />
+            <PropertyRef Name="EntityGUID" />
+          </Key>
+          <Property Name="EntityID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EntityGUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Data" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateUTCDateTimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="CreateServerDateTimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="CreateClientDateTimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="TimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ExampleTable2">
+          <Key>
+            <PropertyRef Name="PriKey" />
+          </Key>
+          <Property Name="PriKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="VerCol" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="Data" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ReplacementTest">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="FK" Type="int" Nullable="false" />
+          <Property Name="ReplacementID" Type="int" />
+          <Property Name="Data" Type="varchar" Nullable="false" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="TriggerTestLog">
+          <Key>
+            <PropertyRef Name="TriggerTestLogID" />
+          </Key>
+          <Property Name="TriggerTestLogID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TriggerTestTopID" Type="int" Nullable="false" />
+          <Property Name="OldData" Type="varchar" MaxLength="50" />
+          <Property Name="NewData" Type="varchar" MaxLength="50" />
+          <Property Name="Action" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ChangeDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TriggerTestTop">
+          <Key>
+            <PropertyRef Name="TriggerTestTopID" />
+          </Key>
+          <Property Name="TriggerTestTopID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Data" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateDateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CodeSection">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Create" Type="datetime" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Database">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Create" Type="datetime" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Delete" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Object">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SchemaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SchemaGUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="DatabaseID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="DatabaseGUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Create" Type="datetime" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Delete" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Object2">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SchemaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="DatabaseID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Create" Type="datetime" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Delete" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Project">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Deleted" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Schema">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Create" Type="datetime" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Delete" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Source">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SourceTypeID" Type="int" Nullable="false" />
+          <Property Name="SourceTypeGUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SectionID" Type="int" Nullable="false" />
+          <Property Name="SectionGUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Code" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="ItemID" />
+            <PropertyRef Name="ItemGUID" />
+          </Key>
+          <Property Name="ItemID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ItemGUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreateDateTime" Type="datetime" Nullable="false" />
+          <Property Name="DeleteDateTime" Type="datetime" />
+          <Property Name="TimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Item_ItemType">
+          <Key>
+            <PropertyRef Name="ItemID" />
+            <PropertyRef Name="ItemGUID" />
+            <PropertyRef Name="ItemTypeID" />
+            <PropertyRef Name="ItemTypeGUID" />
+          </Key>
+          <Property Name="ItemID" Type="int" Nullable="false" />
+          <Property Name="ItemGUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ItemTypeID" Type="int" Nullable="false" />
+          <Property Name="ItemTypeGUID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ItemContext">
+          <Key>
+            <PropertyRef Name="ItemContextID" />
+            <PropertyRef Name="ItemContextGUID" />
+          </Key>
+          <Property Name="ItemContextID" Type="int" Nullable="false" />
+          <Property Name="ItemContextGUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ItemID" Type="int" Nullable="false" />
+          <Property Name="ItemGUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ItemTypeID" Type="int" Nullable="false" />
+          <Property Name="ItemTypeGUID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ItemType">
+          <Key>
+            <PropertyRef Name="ItemTypeID" />
+            <PropertyRef Name="ItemTypeGUID" />
+          </Key>
+          <Property Name="ItemTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ItemTypeGUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreateDateTime" Type="datetime" Nullable="false" />
+          <Property Name="TimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="ItemType" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="ItemTypeDescription" Type="varchar" Nullable="false" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="Project1">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+            <PropertyRef Name="ProjectGUID" />
+          </Key>
+          <Property Name="ProjectID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectGUID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DataTableDefinition">
+          <Key>
+            <PropertyRef Name="DataTableDefinitionID" />
+            <PropertyRef Name="TemplateDataTableDefinitionGUID" />
+          </Key>
+          <Property Name="DataTableDefinitionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TemplateDataTableDefinitionGUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TemplateDataTableDefinitionReplacementID" Type="int" />
+          <Property Name="TemplateDataTableDefinitionReplacementGUID" Type="uniqueidentifier" />
+          <Property Name="CreateUniversalDateTimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedUniversalDateTimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="DeleteUniversalDateTimeStamp" Type="datetime" />
+          <Property Name="TimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="TableDefinition">
+          <Key>
+            <PropertyRef Name="TableDefinitionID" />
+            <PropertyRef Name="TableDefinitionGUID" />
+          </Key>
+          <Property Name="TableDefinitionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TableDefinitionGUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TableDefinitionReplacementID" Type="int" />
+          <Property Name="TableDefinitionReplacementGUID" Type="uniqueidentifier" />
+          <Property Name="CreateUniversalDateTimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedUniversalDateTimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="DeleteUniversalDateTimeStamp" Type="datetime" />
+          <Property Name="TimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="TypeTableDefinition">
+          <Key>
+            <PropertyRef Name="TypeTableDefinitionID" />
+            <PropertyRef Name="TypeTableDefinitionGUID" />
+          </Key>
+          <Property Name="TypeTableDefinitionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TypeTableDefinitionGUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TypeTableDefinitionReplacementID" Type="int" />
+          <Property Name="TypeTableDefinitionReplacementGUID" Type="uniqueidentifier" />
+          <Property Name="CreateUniversalDateTimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedUniversalDateTimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="DeleteUniversalDateTimeStamp" Type="datetime" />
+          <Property Name="TimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SandBox.dbo.Entities' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Entities">
+          <Key>
+            <PropertyRef Name="EntityID" />
+            <PropertyRef Name="EntityGUID" />
+            <PropertyRef Name="Data" />
+            <PropertyRef Name="CreateServerDateTimeStamp" />
+          </Key>
+          <Property Name="EntityID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EntityGUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Data" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateServerDateTimeStamp" Type="datetime" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SandBox.dbo.Entities_Last100' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Entities_Last100">
+          <Key>
+            <PropertyRef Name="EntityID" />
+            <PropertyRef Name="EntityGUID" />
+            <PropertyRef Name="Data" />
+            <PropertyRef Name="CreateUTCDateTimeStamp" />
+            <PropertyRef Name="CreateServerDateTimeStamp" />
+            <PropertyRef Name="CreateClientDateTimeStamp" />
+            <PropertyRef Name="TimeStamp" />
+          </Key>
+          <Property Name="EntityID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EntityGUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Data" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateUTCDateTimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="CreateServerDateTimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="CreateClientDateTimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="TimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="Order" Type="bigint" />
+        </EntityType>
+        <Association Name="FK_Item_ItemType_Item">
+          <End Role="Item" Type="SandBoxModel.Store.Item" Multiplicity="1" />
+          <End Role="Item_ItemType" Type="SandBoxModel.Store.Item_ItemType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="ItemID" />
+              <PropertyRef Name="ItemGUID" />
+            </Principal>
+            <Dependent Role="Item_ItemType">
+              <PropertyRef Name="ItemID" />
+              <PropertyRef Name="ItemGUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Item_ItemType_ItemType">
+          <End Role="ItemType" Type="SandBoxModel.Store.ItemType" Multiplicity="1" />
+          <End Role="Item_ItemType" Type="SandBoxModel.Store.Item_ItemType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ItemType">
+              <PropertyRef Name="ItemTypeID" />
+              <PropertyRef Name="ItemTypeGUID" />
+            </Principal>
+            <Dependent Role="Item_ItemType">
+              <PropertyRef Name="ItemTypeID" />
+              <PropertyRef Name="ItemTypeGUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Object_Database">
+          <End Role="Database" Type="SandBoxModel.Store.Database" Multiplicity="1" />
+          <End Role="Object" Type="SandBoxModel.Store.Object" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Database">
+              <PropertyRef Name="ID" />
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="Object">
+              <PropertyRef Name="DatabaseID" />
+              <PropertyRef Name="DatabaseGUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Object_Schema">
+          <End Role="Schema" Type="SandBoxModel.Store.Schema" Multiplicity="1" />
+          <End Role="Object" Type="SandBoxModel.Store.Object" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Schema">
+              <PropertyRef Name="ID" />
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="Object">
+              <PropertyRef Name="SchemaID" />
+              <PropertyRef Name="SchemaGUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Project_Item">
+          <End Role="Item" Type="SandBoxModel.Store.Item" Multiplicity="1" />
+          <End Role="Project1" Type="SandBoxModel.Store.Project1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="ItemID" />
+              <PropertyRef Name="ItemGUID" />
+            </Principal>
+            <Dependent Role="Project1">
+              <PropertyRef Name="ProjectID" />
+              <PropertyRef Name="ProjectGUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReplacementTest_ReplacementTest">
+          <End Role="ReplacementTest" Type="SandBoxModel.Store.ReplacementTest" Multiplicity="0..1" />
+          <End Role="ReplacementTest1" Type="SandBoxModel.Store.ReplacementTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReplacementTest">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ReplacementTest1">
+              <PropertyRef Name="ReplacementID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TableDefinition_Replacement">
+          <End Role="TableDefinition" Type="SandBoxModel.Store.TableDefinition" Multiplicity="0..1" />
+          <End Role="TableDefinition1" Type="SandBoxModel.Store.TableDefinition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TableDefinition">
+              <PropertyRef Name="TableDefinitionID" />
+              <PropertyRef Name="TableDefinitionGUID" />
+            </Principal>
+            <Dependent Role="TableDefinition1">
+              <PropertyRef Name="TableDefinitionReplacementID" />
+              <PropertyRef Name="TableDefinitionReplacementGUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TemplateDataTableDefinition_Replacement">
+          <End Role="DataTableDefinition" Type="SandBoxModel.Store.DataTableDefinition" Multiplicity="0..1" />
+          <End Role="DataTableDefinition1" Type="SandBoxModel.Store.DataTableDefinition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DataTableDefinition">
+              <PropertyRef Name="DataTableDefinitionID" />
+              <PropertyRef Name="TemplateDataTableDefinitionGUID" />
+            </Principal>
+            <Dependent Role="DataTableDefinition1">
+              <PropertyRef Name="TemplateDataTableDefinitionReplacementID" />
+              <PropertyRef Name="TemplateDataTableDefinitionReplacementGUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TypeTableDefinition_Replacement">
+          <End Role="TypeTableDefinition" Type="SandBoxModel.Store.TypeTableDefinition" Multiplicity="0..1" />
+          <End Role="TypeTableDefinition1" Type="SandBoxModel.Store.TypeTableDefinition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeTableDefinition">
+              <PropertyRef Name="TypeTableDefinitionID" />
+              <PropertyRef Name="TypeTableDefinitionGUID" />
+            </Principal>
+            <Dependent Role="TypeTableDefinition1">
+              <PropertyRef Name="TypeTableDefinitionReplacementID" />
+              <PropertyRef Name="TypeTableDefinitionReplacementGUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="Entities_GetAllInOne" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Entities_GetTop300ByData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Entity_All" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PageSize" Type="int" Mode="InOut" />
+          <Parameter Name="RequestPage" Type="int" Mode="InOut" />
+          <Parameter Name="TotalPages" Type="int" Mode="InOut" />
+          <Parameter Name="TopOverLap" Type="int" Mode="In" />
+          <Parameter Name="BottomOverLap" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Linq2XMLTest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="XML" Type="xml" Mode="InOut" />
+        </Function>
+        <Function Name="TestProc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="XML" Type="xml" Mode="In" />
+        </Function>
+        <Function Name="TestSplitRowSets" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Switch" Type="int" Mode="In" />
+        </Function>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'SandBox.dbo.TriggerTestTop_LOG_DELETED' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="TriggerTestTop_LOG_DELETED">
+        <Property Name="TriggerTestTopID" Type="int" />
+        <Property Name="Data" Type="varchar" MaxLength="50" />
+        <Property Name="CreateDateTime" Type="datetime" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'SandBox.dbo.TriggerTestTop_LOG_INSERTED' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="TriggerTestTop_LOG_INSERTED">
+        <Property Name="TriggerTestTopID" Type="int" />
+        <Property Name="Data" Type="varchar" MaxLength="50" />
+        <Property Name="CreateDateTime" Type="datetime" />
+      </EntityType>-->
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SandBoxModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="SandBoxEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Entities" EntityType="SandBoxModel.Entity" />
+          <EntitySet Name="ExampleTable2" EntityType="SandBoxModel.ExampleTable2" />
+          <EntitySet Name="ReplacementTests" EntityType="SandBoxModel.ReplacementTest" />
+          <EntitySet Name="TriggerTestLogs" EntityType="SandBoxModel.TriggerTestLog" />
+          <EntitySet Name="TriggerTestTops" EntityType="SandBoxModel.TriggerTestTop" />
+          <EntitySet Name="CodeSections" EntityType="SandBoxModel.CodeSection" />
+          <EntitySet Name="Databases" EntityType="SandBoxModel.Database" />
+          <EntitySet Name="Objects" EntityType="SandBoxModel.Object" />
+          <EntitySet Name="Object2" EntityType="SandBoxModel.Object2" />
+          <EntitySet Name="Projects" EntityType="SandBoxModel.Project" />
+          <EntitySet Name="Schemata" EntityType="SandBoxModel.Schema" />
+          <EntitySet Name="Sources" EntityType="SandBoxModel.Source" />
+          <EntitySet Name="Items" EntityType="SandBoxModel.Item" />
+          <EntitySet Name="ItemContexts" EntityType="SandBoxModel.ItemContext" />
+          <EntitySet Name="ItemTypes" EntityType="SandBoxModel.ItemType" />
+          <EntitySet Name="Project1" EntityType="SandBoxModel.Project1" />
+          <EntitySet Name="DataTableDefinitions" EntityType="SandBoxModel.DataTableDefinition" />
+          <EntitySet Name="TableDefinitions" EntityType="SandBoxModel.TableDefinition" />
+          <EntitySet Name="TypeTableDefinitions" EntityType="SandBoxModel.TypeTableDefinition" />
+          <EntitySet Name="Entities1" EntityType="SandBoxModel.Entity1" />
+          <EntitySet Name="Entities_Last100" EntityType="SandBoxModel.Entities_Last100" />
+          <AssociationSet Name="FK_ReplacementTest_ReplacementTest" Association="SandBoxModel.FK_ReplacementTest_ReplacementTest">
+            <End Role="ReplacementTest" EntitySet="ReplacementTests" />
+            <End Role="ReplacementTest1" EntitySet="ReplacementTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Object_Database" Association="SandBoxModel.FK_Object_Database">
+            <End Role="Database" EntitySet="Databases" />
+            <End Role="Object" EntitySet="Objects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Object_Schema" Association="SandBoxModel.FK_Object_Schema">
+            <End Role="Schema" EntitySet="Schemata" />
+            <End Role="Object" EntitySet="Objects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Project_Item" Association="SandBoxModel.FK_Project_Item">
+            <End Role="Item" EntitySet="Items" />
+            <End Role="Project1" EntitySet="Project1" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TemplateDataTableDefinition_Replacement" Association="SandBoxModel.FK_TemplateDataTableDefinition_Replacement">
+            <End Role="DataTableDefinition" EntitySet="DataTableDefinitions" />
+            <End Role="DataTableDefinition1" EntitySet="DataTableDefinitions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TableDefinition_Replacement" Association="SandBoxModel.FK_TableDefinition_Replacement">
+            <End Role="TableDefinition" EntitySet="TableDefinitions" />
+            <End Role="TableDefinition1" EntitySet="TableDefinitions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TypeTableDefinition_Replacement" Association="SandBoxModel.FK_TypeTableDefinition_Replacement">
+            <End Role="TypeTableDefinition" EntitySet="TypeTableDefinitions" />
+            <End Role="TypeTableDefinition1" EntitySet="TypeTableDefinitions" />
+          </AssociationSet>
+          <AssociationSet Name="Item_ItemType" Association="SandBoxModel.Item_ItemType">
+            <End Role="Item" EntitySet="Items" />
+            <End Role="ItemType" EntitySet="ItemTypes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Entity">
+          <Key>
+            <PropertyRef Name="EntityID" />
+            <PropertyRef Name="EntityGUID" />
+          </Key>
+          <Property Name="EntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EntityGUID" Type="Guid" Nullable="false" />
+          <Property Name="Data" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CreateUTCDateTimeStamp" Type="DateTime" Nullable="false" />
+          <Property Name="CreateServerDateTimeStamp" Type="DateTime" Nullable="false" />
+          <Property Name="CreateClientDateTimeStamp" Type="DateTime" Nullable="false" />
+          <Property Name="TimeStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ExampleTable2">
+          <Key>
+            <PropertyRef Name="PriKey" />
+          </Key>
+          <Property Name="PriKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VerCol" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Data" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ReplacementTest">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="FK" Type="Int32" Nullable="false" />
+          <Property Name="ReplacementID" Type="Int32" />
+          <Property Name="Data" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="ReplacementTest1" Relationship="SandBoxModel.FK_ReplacementTest_ReplacementTest" FromRole="ReplacementTest" ToRole="ReplacementTest1" />
+          <NavigationProperty Name="ReplacementTest2" Relationship="SandBoxModel.FK_ReplacementTest_ReplacementTest" FromRole="ReplacementTest1" ToRole="ReplacementTest" />
+        </EntityType>
+        <EntityType Name="TriggerTestLog">
+          <Key>
+            <PropertyRef Name="TriggerTestLogID" />
+          </Key>
+          <Property Name="TriggerTestLogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TriggerTestTopID" Type="Int32" Nullable="false" />
+          <Property Name="OldData" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="NewData" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Action" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ChangeDate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TriggerTestTop">
+          <Key>
+            <PropertyRef Name="TriggerTestTopID" />
+          </Key>
+          <Property Name="TriggerTestTopID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Data" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDateTime" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CodeSection">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="GUID" Type="Guid" Nullable="false" />
+          <Property Name="Create" Type="DateTime" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Database">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="GUID" Type="Guid" Nullable="false" />
+          <Property Name="Create" Type="DateTime" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Delete" Type="DateTime" />
+          <NavigationProperty Name="Objects" Relationship="SandBoxModel.FK_Object_Database" FromRole="Database" ToRole="Object" />
+        </EntityType>
+        <EntityType Name="Object">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="GUID" Type="Guid" Nullable="false" />
+          <Property Name="SchemaID" Type="Guid" Nullable="false" />
+          <Property Name="SchemaGUID" Type="Guid" Nullable="false" />
+          <Property Name="DatabaseID" Type="Guid" Nullable="false" />
+          <Property Name="DatabaseGUID" Type="Guid" Nullable="false" />
+          <Property Name="Create" Type="DateTime" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Delete" Type="DateTime" />
+          <NavigationProperty Name="Database" Relationship="SandBoxModel.FK_Object_Database" FromRole="Object" ToRole="Database" />
+          <NavigationProperty Name="Schema" Relationship="SandBoxModel.FK_Object_Schema" FromRole="Object" ToRole="Schema" />
+        </EntityType>
+        <EntityType Name="Object2">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="GUID" Type="Guid" Nullable="false" />
+          <Property Name="SchemaID" Type="Guid" Nullable="false" />
+          <Property Name="DatabaseID" Type="Guid" Nullable="false" />
+          <Property Name="Create" Type="DateTime" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Delete" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Project">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="GUID" Type="Guid" Nullable="false" />
+          <Property Name="Created" Type="DateTime" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Deleted" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Schema">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="GUID" Type="Guid" Nullable="false" />
+          <Property Name="Create" Type="DateTime" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Delete" Type="DateTime" />
+          <NavigationProperty Name="Objects" Relationship="SandBoxModel.FK_Object_Schema" FromRole="Schema" ToRole="Object" />
+        </EntityType>
+        <EntityType Name="Source">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="GUID" Type="Guid" Nullable="false" />
+          <Property Name="SourceTypeID" Type="Int32" Nullable="false" />
+          <Property Name="SourceTypeGUID" Type="Guid" Nullable="false" />
+          <Property Name="SectionID" Type="Int32" Nullable="false" />
+          <Property Name="SectionGUID" Type="Guid" Nullable="false" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="ItemID" />
+            <PropertyRef Name="ItemGUID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemGUID" Type="Guid" Nullable="false" />
+          <Property Name="CreateDateTime" Type="DateTime" Nullable="false" />
+          <Property Name="DeleteDateTime" Type="DateTime" />
+          <Property Name="TimeStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="Project1" Relationship="SandBoxModel.FK_Project_Item" FromRole="Item" ToRole="Project1" />
+          <NavigationProperty Name="ItemTypes" Relationship="SandBoxModel.Item_ItemType" FromRole="Item" ToRole="ItemType" />
+        </EntityType>
+        <EntityType Name="ItemContext">
+          <Key>
+            <PropertyRef Name="ItemContextID" />
+            <PropertyRef Name="ItemContextGUID" />
+          </Key>
+          <Property Name="ItemContextID" Type="Int32" Nullable="false" />
+          <Property Name="ItemContextGUID" Type="Guid" Nullable="false" />
+          <Property Name="ItemID" Type="Int32" Nullable="false" />
+          <Property Name="ItemGUID" Type="Guid" Nullable="false" />
+          <Property Name="ItemTypeID" Type="Int32" Nullable="false" />
+          <Property Name="ItemTypeGUID" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ItemType">
+          <Key>
+            <PropertyRef Name="ItemTypeID" />
+            <PropertyRef Name="ItemTypeGUID" />
+          </Key>
+          <Property Name="ItemTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemTypeGUID" Type="Guid" Nullable="false" />
+          <Property Name="CreateDateTime" Type="DateTime" Nullable="false" />
+          <Property Name="TimeStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="ItemType1" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ItemTypeDescription" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Items" Relationship="SandBoxModel.Item_ItemType" FromRole="ItemType" ToRole="Item" />
+        </EntityType>
+        <EntityType Name="Project1">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+            <PropertyRef Name="ProjectGUID" />
+          </Key>
+          <Property Name="ProjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectGUID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Item" Relationship="SandBoxModel.FK_Project_Item" FromRole="Project1" ToRole="Item" />
+        </EntityType>
+        <EntityType Name="DataTableDefinition">
+          <Key>
+            <PropertyRef Name="DataTableDefinitionID" />
+            <PropertyRef Name="TemplateDataTableDefinitionGUID" />
+          </Key>
+          <Property Name="DataTableDefinitionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TemplateDataTableDefinitionGUID" Type="Guid" Nullable="false" />
+          <Property Name="TemplateDataTableDefinitionReplacementID" Type="Int32" />
+          <Property Name="TemplateDataTableDefinitionReplacementGUID" Type="Guid" />
+          <Property Name="CreateUniversalDateTimeStamp" Type="DateTime" Nullable="false" />
+          <Property Name="ModifiedUniversalDateTimeStamp" Type="DateTime" Nullable="false" />
+          <Property Name="DeleteUniversalDateTimeStamp" Type="DateTime" />
+          <Property Name="TimeStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="DataTableDefinition1" Relationship="SandBoxModel.FK_TemplateDataTableDefinition_Replacement" FromRole="DataTableDefinition" ToRole="DataTableDefinition1" />
+          <NavigationProperty Name="DataTableDefinition2" Relationship="SandBoxModel.FK_TemplateDataTableDefinition_Replacement" FromRole="DataTableDefinition1" ToRole="DataTableDefinition" />
+        </EntityType>
+        <EntityType Name="TableDefinition">
+          <Key>
+            <PropertyRef Name="TableDefinitionID" />
+            <PropertyRef Name="TableDefinitionGUID" />
+          </Key>
+          <Property Name="TableDefinitionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TableDefinitionGUID" Type="Guid" Nullable="false" />
+          <Property Name="TableDefinitionReplacementID" Type="Int32" />
+          <Property Name="TableDefinitionReplacementGUID" Type="Guid" />
+          <Property Name="CreateUniversalDateTimeStamp" Type="DateTime" Nullable="false" />
+          <Property Name="ModifiedUniversalDateTimeStamp" Type="DateTime" Nullable="false" />
+          <Property Name="DeleteUniversalDateTimeStamp" Type="DateTime" />
+          <Property Name="TimeStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="TableDefinition1" Relationship="SandBoxModel.FK_TableDefinition_Replacement" FromRole="TableDefinition" ToRole="TableDefinition1" />
+          <NavigationProperty Name="TableDefinition2" Relationship="SandBoxModel.FK_TableDefinition_Replacement" FromRole="TableDefinition1" ToRole="TableDefinition" />
+        </EntityType>
+        <EntityType Name="TypeTableDefinition">
+          <Key>
+            <PropertyRef Name="TypeTableDefinitionID" />
+            <PropertyRef Name="TypeTableDefinitionGUID" />
+          </Key>
+          <Property Name="TypeTableDefinitionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeTableDefinitionGUID" Type="Guid" Nullable="false" />
+          <Property Name="TypeTableDefinitionReplacementID" Type="Int32" />
+          <Property Name="TypeTableDefinitionReplacementGUID" Type="Guid" />
+          <Property Name="CreateUniversalDateTimeStamp" Type="DateTime" Nullable="false" />
+          <Property Name="ModifiedUniversalDateTimeStamp" Type="DateTime" Nullable="false" />
+          <Property Name="DeleteUniversalDateTimeStamp" Type="DateTime" />
+          <Property Name="TimeStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="TypeTableDefinition1" Relationship="SandBoxModel.FK_TypeTableDefinition_Replacement" FromRole="TypeTableDefinition" ToRole="TypeTableDefinition1" />
+          <NavigationProperty Name="TypeTableDefinition2" Relationship="SandBoxModel.FK_TypeTableDefinition_Replacement" FromRole="TypeTableDefinition1" ToRole="TypeTableDefinition" />
+        </EntityType>
+        <EntityType Name="Entity1">
+          <Key>
+            <PropertyRef Name="EntityID" />
+            <PropertyRef Name="EntityGUID" />
+            <PropertyRef Name="Data" />
+            <PropertyRef Name="CreateServerDateTimeStamp" />
+          </Key>
+          <Property Name="EntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EntityGUID" Type="Guid" Nullable="false" />
+          <Property Name="Data" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CreateServerDateTimeStamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Entities_Last100">
+          <Key>
+            <PropertyRef Name="EntityID" />
+            <PropertyRef Name="EntityGUID" />
+            <PropertyRef Name="Data" />
+            <PropertyRef Name="CreateUTCDateTimeStamp" />
+            <PropertyRef Name="CreateServerDateTimeStamp" />
+            <PropertyRef Name="CreateClientDateTimeStamp" />
+            <PropertyRef Name="TimeStamp" />
+          </Key>
+          <Property Name="EntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EntityGUID" Type="Guid" Nullable="false" />
+          <Property Name="Data" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CreateUTCDateTimeStamp" Type="DateTime" Nullable="false" />
+          <Property Name="CreateServerDateTimeStamp" Type="DateTime" Nullable="false" />
+          <Property Name="CreateClientDateTimeStamp" Type="DateTime" Nullable="false" />
+          <Property Name="TimeStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Order" Type="Int64" />
+        </EntityType>
+        <Association Name="FK_ReplacementTest_ReplacementTest">
+          <End Role="ReplacementTest" Type="SandBoxModel.ReplacementTest" Multiplicity="0..1" />
+          <End Role="ReplacementTest1" Type="SandBoxModel.ReplacementTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReplacementTest">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ReplacementTest1">
+              <PropertyRef Name="ReplacementID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Object_Database">
+          <End Role="Database" Type="SandBoxModel.Database" Multiplicity="1" />
+          <End Role="Object" Type="SandBoxModel.Object" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Database">
+              <PropertyRef Name="ID" />
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="Object">
+              <PropertyRef Name="DatabaseID" />
+              <PropertyRef Name="DatabaseGUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Object_Schema">
+          <End Role="Schema" Type="SandBoxModel.Schema" Multiplicity="1" />
+          <End Role="Object" Type="SandBoxModel.Object" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Schema">
+              <PropertyRef Name="ID" />
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="Object">
+              <PropertyRef Name="SchemaID" />
+              <PropertyRef Name="SchemaGUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Project_Item">
+          <End Role="Item" Type="SandBoxModel.Item" Multiplicity="1" />
+          <End Role="Project1" Type="SandBoxModel.Project1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="ItemID" />
+              <PropertyRef Name="ItemGUID" />
+            </Principal>
+            <Dependent Role="Project1">
+              <PropertyRef Name="ProjectID" />
+              <PropertyRef Name="ProjectGUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TemplateDataTableDefinition_Replacement">
+          <End Role="DataTableDefinition" Type="SandBoxModel.DataTableDefinition" Multiplicity="0..1" />
+          <End Role="DataTableDefinition1" Type="SandBoxModel.DataTableDefinition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DataTableDefinition">
+              <PropertyRef Name="DataTableDefinitionID" />
+              <PropertyRef Name="TemplateDataTableDefinitionGUID" />
+            </Principal>
+            <Dependent Role="DataTableDefinition1">
+              <PropertyRef Name="TemplateDataTableDefinitionReplacementID" />
+              <PropertyRef Name="TemplateDataTableDefinitionReplacementGUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TableDefinition_Replacement">
+          <End Role="TableDefinition" Type="SandBoxModel.TableDefinition" Multiplicity="0..1" />
+          <End Role="TableDefinition1" Type="SandBoxModel.TableDefinition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TableDefinition">
+              <PropertyRef Name="TableDefinitionID" />
+              <PropertyRef Name="TableDefinitionGUID" />
+            </Principal>
+            <Dependent Role="TableDefinition1">
+              <PropertyRef Name="TableDefinitionReplacementID" />
+              <PropertyRef Name="TableDefinitionReplacementGUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TypeTableDefinition_Replacement">
+          <End Role="TypeTableDefinition" Type="SandBoxModel.TypeTableDefinition" Multiplicity="0..1" />
+          <End Role="TypeTableDefinition1" Type="SandBoxModel.TypeTableDefinition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeTableDefinition">
+              <PropertyRef Name="TypeTableDefinitionID" />
+              <PropertyRef Name="TypeTableDefinitionGUID" />
+            </Principal>
+            <Dependent Role="TypeTableDefinition1">
+              <PropertyRef Name="TypeTableDefinitionReplacementID" />
+              <PropertyRef Name="TypeTableDefinitionReplacementGUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Item_ItemType">
+          <End Role="Item" Type="SandBoxModel.Item" Multiplicity="*" />
+          <End Role="ItemType" Type="SandBoxModel.ItemType" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SandBoxModelStoreContainer" CdmEntityContainer="SandBoxEntities">
+          <EntitySetMapping Name="Entities">
+            <EntityTypeMapping TypeName="SandBoxModel.Entity">
+              <MappingFragment StoreEntitySet="Entity">
+                <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+                <ScalarProperty Name="EntityGUID" ColumnName="EntityGUID" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="CreateUTCDateTimeStamp" ColumnName="CreateUTCDateTimeStamp" />
+                <ScalarProperty Name="CreateServerDateTimeStamp" ColumnName="CreateServerDateTimeStamp" />
+                <ScalarProperty Name="CreateClientDateTimeStamp" ColumnName="CreateClientDateTimeStamp" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExampleTable2">
+            <EntityTypeMapping TypeName="SandBoxModel.ExampleTable2">
+              <MappingFragment StoreEntitySet="ExampleTable2">
+                <ScalarProperty Name="PriKey" ColumnName="PriKey" />
+                <ScalarProperty Name="VerCol" ColumnName="VerCol" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReplacementTests">
+            <EntityTypeMapping TypeName="SandBoxModel.ReplacementTest">
+              <MappingFragment StoreEntitySet="ReplacementTest">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FK" ColumnName="FK" />
+                <ScalarProperty Name="ReplacementID" ColumnName="ReplacementID" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TriggerTestLogs">
+            <EntityTypeMapping TypeName="SandBoxModel.TriggerTestLog">
+              <MappingFragment StoreEntitySet="TriggerTestLog">
+                <ScalarProperty Name="TriggerTestLogID" ColumnName="TriggerTestLogID" />
+                <ScalarProperty Name="TriggerTestTopID" ColumnName="TriggerTestTopID" />
+                <ScalarProperty Name="OldData" ColumnName="OldData" />
+                <ScalarProperty Name="NewData" ColumnName="NewData" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TriggerTestTops">
+            <EntityTypeMapping TypeName="SandBoxModel.TriggerTestTop">
+              <MappingFragment StoreEntitySet="TriggerTestTop">
+                <ScalarProperty Name="TriggerTestTopID" ColumnName="TriggerTestTopID" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CodeSections">
+            <EntityTypeMapping TypeName="SandBoxModel.CodeSection">
+              <MappingFragment StoreEntitySet="CodeSection">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="Create" ColumnName="Create" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Databases">
+            <EntityTypeMapping TypeName="SandBoxModel.Database">
+              <MappingFragment StoreEntitySet="Database">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="Create" ColumnName="Create" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Delete" ColumnName="Delete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Objects">
+            <EntityTypeMapping TypeName="SandBoxModel.Object">
+              <MappingFragment StoreEntitySet="Object">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="SchemaID" ColumnName="SchemaID" />
+                <ScalarProperty Name="SchemaGUID" ColumnName="SchemaGUID" />
+                <ScalarProperty Name="DatabaseID" ColumnName="DatabaseID" />
+                <ScalarProperty Name="DatabaseGUID" ColumnName="DatabaseGUID" />
+                <ScalarProperty Name="Create" ColumnName="Create" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Delete" ColumnName="Delete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Object2">
+            <EntityTypeMapping TypeName="SandBoxModel.Object2">
+              <MappingFragment StoreEntitySet="Object2">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="SchemaID" ColumnName="SchemaID" />
+                <ScalarProperty Name="DatabaseID" ColumnName="DatabaseID" />
+                <ScalarProperty Name="Create" ColumnName="Create" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Delete" ColumnName="Delete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Projects">
+            <EntityTypeMapping TypeName="SandBoxModel.Project">
+              <MappingFragment StoreEntitySet="Project">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schemata">
+            <EntityTypeMapping TypeName="SandBoxModel.Schema">
+              <MappingFragment StoreEntitySet="Schema">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="Create" ColumnName="Create" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Delete" ColumnName="Delete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sources">
+            <EntityTypeMapping TypeName="SandBoxModel.Source">
+              <MappingFragment StoreEntitySet="Source">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="SourceTypeID" ColumnName="SourceTypeID" />
+                <ScalarProperty Name="SourceTypeGUID" ColumnName="SourceTypeGUID" />
+                <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+                <ScalarProperty Name="SectionGUID" ColumnName="SectionGUID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Items">
+            <EntityTypeMapping TypeName="SandBoxModel.Item">
+              <MappingFragment StoreEntitySet="Item">
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="ItemGUID" ColumnName="ItemGUID" />
+                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+                <ScalarProperty Name="DeleteDateTime" ColumnName="DeleteDateTime" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ItemContexts">
+            <EntityTypeMapping TypeName="SandBoxModel.ItemContext">
+              <MappingFragment StoreEntitySet="ItemContext">
+                <ScalarProperty Name="ItemContextID" ColumnName="ItemContextID" />
+                <ScalarProperty Name="ItemContextGUID" ColumnName="ItemContextGUID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="ItemGUID" ColumnName="ItemGUID" />
+                <ScalarProperty Name="ItemTypeID" ColumnName="ItemTypeID" />
+                <ScalarProperty Name="ItemTypeGUID" ColumnName="ItemTypeGUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ItemTypes">
+            <EntityTypeMapping TypeName="SandBoxModel.ItemType">
+              <MappingFragment StoreEntitySet="ItemType">
+                <ScalarProperty Name="ItemTypeID" ColumnName="ItemTypeID" />
+                <ScalarProperty Name="ItemTypeGUID" ColumnName="ItemTypeGUID" />
+                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="ItemType1" ColumnName="ItemType" />
+                <ScalarProperty Name="ItemTypeDescription" ColumnName="ItemTypeDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Project1">
+            <EntityTypeMapping TypeName="SandBoxModel.Project1">
+              <MappingFragment StoreEntitySet="Project1">
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="ProjectGUID" ColumnName="ProjectGUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DataTableDefinitions">
+            <EntityTypeMapping TypeName="SandBoxModel.DataTableDefinition">
+              <MappingFragment StoreEntitySet="DataTableDefinition">
+                <ScalarProperty Name="DataTableDefinitionID" ColumnName="DataTableDefinitionID" />
+                <ScalarProperty Name="TemplateDataTableDefinitionGUID" ColumnName="TemplateDataTableDefinitionGUID" />
+                <ScalarProperty Name="TemplateDataTableDefinitionReplacementID" ColumnName="TemplateDataTableDefinitionReplacementID" />
+                <ScalarProperty Name="TemplateDataTableDefinitionReplacementGUID" ColumnName="TemplateDataTableDefinitionReplacementGUID" />
+                <ScalarProperty Name="CreateUniversalDateTimeStamp" ColumnName="CreateUniversalDateTimeStamp" />
+                <ScalarProperty Name="ModifiedUniversalDateTimeStamp" ColumnName="ModifiedUniversalDateTimeStamp" />
+                <ScalarProperty Name="DeleteUniversalDateTimeStamp" ColumnName="DeleteUniversalDateTimeStamp" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TableDefinitions">
+            <EntityTypeMapping TypeName="SandBoxModel.TableDefinition">
+              <MappingFragment StoreEntitySet="TableDefinition">
+                <ScalarProperty Name="TableDefinitionID" ColumnName="TableDefinitionID" />
+                <ScalarProperty Name="TableDefinitionGUID" ColumnName="TableDefinitionGUID" />
+                <ScalarProperty Name="TableDefinitionReplacementID" ColumnName="TableDefinitionReplacementID" />
+                <ScalarProperty Name="TableDefinitionReplacementGUID" ColumnName="TableDefinitionReplacementGUID" />
+                <ScalarProperty Name="CreateUniversalDateTimeStamp" ColumnName="CreateUniversalDateTimeStamp" />
+                <ScalarProperty Name="ModifiedUniversalDateTimeStamp" ColumnName="ModifiedUniversalDateTimeStamp" />
+                <ScalarProperty Name="DeleteUniversalDateTimeStamp" ColumnName="DeleteUniversalDateTimeStamp" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypeTableDefinitions">
+            <EntityTypeMapping TypeName="SandBoxModel.TypeTableDefinition">
+              <MappingFragment StoreEntitySet="TypeTableDefinition">
+                <ScalarProperty Name="TypeTableDefinitionID" ColumnName="TypeTableDefinitionID" />
+                <ScalarProperty Name="TypeTableDefinitionGUID" ColumnName="TypeTableDefinitionGUID" />
+                <ScalarProperty Name="TypeTableDefinitionReplacementID" ColumnName="TypeTableDefinitionReplacementID" />
+                <ScalarProperty Name="TypeTableDefinitionReplacementGUID" ColumnName="TypeTableDefinitionReplacementGUID" />
+                <ScalarProperty Name="CreateUniversalDateTimeStamp" ColumnName="CreateUniversalDateTimeStamp" />
+                <ScalarProperty Name="ModifiedUniversalDateTimeStamp" ColumnName="ModifiedUniversalDateTimeStamp" />
+                <ScalarProperty Name="DeleteUniversalDateTimeStamp" ColumnName="DeleteUniversalDateTimeStamp" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Entities1">
+            <EntityTypeMapping TypeName="SandBoxModel.Entity1">
+              <MappingFragment StoreEntitySet="Entities">
+                <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+                <ScalarProperty Name="EntityGUID" ColumnName="EntityGUID" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="CreateServerDateTimeStamp" ColumnName="CreateServerDateTimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Entities_Last100">
+            <EntityTypeMapping TypeName="SandBoxModel.Entities_Last100">
+              <MappingFragment StoreEntitySet="Entities_Last100">
+                <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+                <ScalarProperty Name="EntityGUID" ColumnName="EntityGUID" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="CreateUTCDateTimeStamp" ColumnName="CreateUTCDateTimeStamp" />
+                <ScalarProperty Name="CreateServerDateTimeStamp" ColumnName="CreateServerDateTimeStamp" />
+                <ScalarProperty Name="CreateClientDateTimeStamp" ColumnName="CreateClientDateTimeStamp" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="Item_ItemType" TypeName="SandBoxModel.Item_ItemType" StoreEntitySet="Item_ItemType">
+            <EndProperty Name="Item">
+              <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              <ScalarProperty Name="ItemGUID" ColumnName="ItemGUID" />
+            </EndProperty>
+            <EndProperty Name="ItemType">
+              <ScalarProperty Name="ItemTypeID" ColumnName="ItemTypeID" />
+              <ScalarProperty Name="ItemTypeGUID" ColumnName="ItemTypeGUID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="SandBoxModel.Entity" Width="1.5" PointX="8.75" PointY="0.75" Height="2.3648893229166665" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.ExampleTable2" Width="1.5" PointX="7.75" PointY="9.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.ReplacementTest" Width="1.5" PointX="6.75" PointY="0.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.TriggerTestLog" Width="1.5" PointX="9.75" PointY="9.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.TriggerTestTop" Width="1.5" PointX="10.75" PointY="0.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.CodeSection" Width="1.5" PointX="0.75" PointY="10.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.Database" Width="1.5" PointX="5.75" PointY="5.5" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.Object" Width="1.5" PointX="8" PointY="5" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.Object2" Width="1.5" PointX="2.75" PointY="10.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.Project" Width="1.5" PointX="10.75" PointY="3.75" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.Schema" Width="1.5" PointX="5.75" PointY="8.5" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.Source" Width="1.5" PointX="4.75" PointY="11.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.Item" Width="1.5" PointX="0.75" PointY="6.25" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.ItemContext" Width="1.5" PointX="10.75" PointY="6.75" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.ItemType" Width="1.5" PointX="3" PointY="5" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.Project1" Width="1.5" PointX="3" PointY="8.125" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.DataTableDefinition" Width="1.5" PointX="4.75" PointY="0.75" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.TableDefinition" Width="1.5" PointX="2.75" PointY="0.75" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.TypeTableDefinition" Width="1.5" PointX="0.75" PointY="0.75" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.Entity1" Width="1.5" PointX="11.75" PointY="9.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandBoxModel.Entities_Last100" Width="1.5" PointX="12.75" PointY="0.75" Height="2.5571907552083317" IsExpanded="true" />
+        <AssociationConnector Association="SandBoxModel.FK_ReplacementTest_ReplacementTest" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.2819230769230776" PointY="2.9225878906249996" />
+          <ConnectorPoint PointX="7.2819230769230776" PointY="3.1725878906249996" />
+          <ConnectorPoint PointX="7.7284615384615387" PointY="3.1725878906249996" />
+          <ConnectorPoint PointX="7.7284615384615387" PointY="2.9225878906249996" />
+        </AssociationConnector>
+        <AssociationConnector Association="SandBoxModel.FK_Object_Database" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.25" PointY="6.5862939453125" />
+          <ConnectorPoint PointX="8" PointY="6.5862939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="SandBoxModel.FK_Object_Schema" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.25" PointY="9.09375" />
+          <ConnectorPoint PointX="9.40625" PointY="9.09375" />
+          <ConnectorPoint PointX="9.40625" PointY="8.1340950520833317" />
+        </AssociationConnector>
+        <AssociationConnector Association="SandBoxModel.FK_Project_Item" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="8.3699446614583337" />
+          <ConnectorPoint PointX="3" PointY="8.3699446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="SandBoxModel.FK_TemplateDataTableDefinition_Replacement" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.2819230769230767" PointY="3.6917936197916674" />
+          <ConnectorPoint PointX="5.2819230769230767" PointY="3.9417936197916674" />
+          <ConnectorPoint PointX="5.7284615384615378" PointY="3.9417936197916674" />
+          <ConnectorPoint PointX="5.7284615384615378" PointY="3.6917936197916674" />
+        </AssociationConnector>
+        <AssociationConnector Association="SandBoxModel.FK_TableDefinition_Replacement" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.2819230769230767" PointY="3.6917936197916674" />
+          <ConnectorPoint PointX="3.2819230769230767" PointY="3.9417936197916674" />
+          <ConnectorPoint PointX="3.7284615384615383" PointY="3.9417936197916674" />
+          <ConnectorPoint PointX="3.7284615384615383" PointY="3.6917936197916674" />
+        </AssociationConnector>
+        <AssociationConnector Association="SandBoxModel.FK_TypeTableDefinition_Replacement" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.2819230769230767" PointY="3.6917936197916674" />
+          <ConnectorPoint PointX="1.2819230769230767" PointY="3.9417936197916674" />
+          <ConnectorPoint PointX="1.7284615384615383" PointY="3.9417936197916674" />
+          <ConnectorPoint PointX="1.7284615384615383" PointY="3.6917936197916674" />
+        </AssociationConnector>
+        <AssociationConnector Association="SandBoxModel.Item_ItemType" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="6.8074446614583337" />
+          <ConnectorPoint PointX="3" PointY="6.8074446614583337" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

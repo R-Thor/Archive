@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Modules.PowerPlantModule" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PowerPlantModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modules.Material" Collapsed="true">
+    <Position X="17" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAgAAAgAAAACAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Material.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modules.Layer" Collapsed="true">
+    <Position X="13.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Layer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modules.HabitatModule" Collapsed="true">
+    <Position X="8.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HabitatModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modules.ModuleBase" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAIAAAABAIAAAAAAAAAIACA=</HashCode>
+      <FileName>Module\ModuleBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modules.LifeSupport" Collapsed="true">
+    <Position X="15.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Module\LifeSupport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modules.ShipSystem" Collapsed="true">
+    <Position X="13.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command\SystemAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modules.Workstation" Collapsed="true">
+    <Position X="15.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Command\Station.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modules.CommandModule" Collapsed="true">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Command\CommandModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modules.CargoModule">
+    <Position X="4" Y="3" Width="1.5" />
+    <InheritanceLine Type="Modules.ModuleBase" FixedToPoint="true">
+      <Path>
+        <Point X="7" Y="1.062" />
+        <Point X="7" Y="1.375" />
+        <Point X="6.05" Y="1.375" />
+        <Point X="6.05" Y="2.7" />
+        <Point X="4.75" Y="2.7" />
+        <Point X="4.75" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CargoModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modules.DefenseModule">
+    <Position X="7.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Defense\DefenseModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modules.ShieldModule" Collapsed="true">
+    <Position X="6" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Defense\Shield.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modules.ProjectileModule">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Defense\ProjectileModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modules.EnergyWeaponModule">
+    <Position X="9.75" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Defense\EnergyModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modules.SensorModule">
+    <Position X="11.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Science\SensorModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Modules.Dimensions" Collapsed="true">
+    <Position X="15.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Module\Dimensions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Modules.Construction" Collapsed="true">
+    <Position X="13.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Module\Construction.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

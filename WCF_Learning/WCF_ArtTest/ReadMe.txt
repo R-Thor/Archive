@@ -1,0 +1,1 @@
+This aplication will simulate a game to server interaction

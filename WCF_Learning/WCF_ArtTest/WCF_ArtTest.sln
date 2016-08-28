@@ -1,0 +1,107 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7A349D8A-4D9E-4E8C-B060-F954594CBC30}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_GameHostServices", "WCF_GameHostServices\WCF_GameHostServices.csproj", "{2EEDF0C7-B0F7-4EBE-AD8A-FE544297E629}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_GameServiceLibrary", "WCF_GameServiceLibrary\WCF_GameServiceLibrary.csproj", "{0D3F007C-D7E8-48FD-B2BD-EA230BAC40B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_GameClient", "WCF_GameClient\WCF_GameClient.csproj", "{9660FEEC-6DEC-46E8-A9E5-7E1F72D59C9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceLibrary_Template", "WcfServiceLibrary_Template\WcfServiceLibrary_Template.csproj", "{458DA8A8-4079-4A3F-87B4-84169163E663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculateConsoleApplication", "CalculateConsoleApplication\CalculateConsoleApplication.csproj", "{E44C467C-8951-4569-B0AF-16EF5DDF7092}"
+	ProjectSection(ProjectDependencies) = postProject
+		{458DA8A8-4079-4A3F-87B4-84169163E663} = {458DA8A8-4079-4A3F-87B4-84169163E663}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://localhost:8080/tfs/sandbox
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WCF_GameHostServices\\WCF_GameHostServices.csproj
+		SccProjectName1 = WCF_GameHostServices
+		SccLocalPath1 = WCF_GameHostServices
+		SccProjectUniqueName2 = WCF_GameServiceLibrary\\WCF_GameServiceLibrary.csproj
+		SccProjectName2 = WCF_GameServiceLibrary
+		SccLocalPath2 = WCF_GameServiceLibrary
+		SccProjectUniqueName3 = WCF_GameClient\\WCF_GameClient.csproj
+		SccProjectName3 = WCF_GameClient
+		SccLocalPath3 = WCF_GameClient
+		SccProjectUniqueName4 = WcfServiceLibrary_Template\\WcfServiceLibrary_Template.csproj
+		SccProjectName4 = WcfServiceLibrary_Template
+		SccLocalPath4 = WcfServiceLibrary_Template
+		SccProjectUniqueName5 = CalculateConsoleApplication\\CalculateConsoleApplication.csproj
+		SccProjectName5 = CalculateConsoleApplication
+		SccLocalPath5 = CalculateConsoleApplication
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EEDF0C7-B0F7-4EBE-AD8A-FE544297E629}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{2EEDF0C7-B0F7-4EBE-AD8A-FE544297E629}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{2EEDF0C7-B0F7-4EBE-AD8A-FE544297E629}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{2EEDF0C7-B0F7-4EBE-AD8A-FE544297E629}.Debug|x86.ActiveCfg = Debug|x86
+		{2EEDF0C7-B0F7-4EBE-AD8A-FE544297E629}.Debug|x86.Build.0 = Debug|x86
+		{2EEDF0C7-B0F7-4EBE-AD8A-FE544297E629}.Release|Any CPU.ActiveCfg = Release|x86
+		{2EEDF0C7-B0F7-4EBE-AD8A-FE544297E629}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{2EEDF0C7-B0F7-4EBE-AD8A-FE544297E629}.Release|Mixed Platforms.Build.0 = Release|x86
+		{2EEDF0C7-B0F7-4EBE-AD8A-FE544297E629}.Release|x86.ActiveCfg = Release|x86
+		{2EEDF0C7-B0F7-4EBE-AD8A-FE544297E629}.Release|x86.Build.0 = Release|x86
+		{0D3F007C-D7E8-48FD-B2BD-EA230BAC40B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D3F007C-D7E8-48FD-B2BD-EA230BAC40B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D3F007C-D7E8-48FD-B2BD-EA230BAC40B3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0D3F007C-D7E8-48FD-B2BD-EA230BAC40B3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0D3F007C-D7E8-48FD-B2BD-EA230BAC40B3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0D3F007C-D7E8-48FD-B2BD-EA230BAC40B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D3F007C-D7E8-48FD-B2BD-EA230BAC40B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D3F007C-D7E8-48FD-B2BD-EA230BAC40B3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0D3F007C-D7E8-48FD-B2BD-EA230BAC40B3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0D3F007C-D7E8-48FD-B2BD-EA230BAC40B3}.Release|x86.ActiveCfg = Release|Any CPU
+		{9660FEEC-6DEC-46E8-A9E5-7E1F72D59C9D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{9660FEEC-6DEC-46E8-A9E5-7E1F72D59C9D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{9660FEEC-6DEC-46E8-A9E5-7E1F72D59C9D}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{9660FEEC-6DEC-46E8-A9E5-7E1F72D59C9D}.Debug|x86.ActiveCfg = Debug|x86
+		{9660FEEC-6DEC-46E8-A9E5-7E1F72D59C9D}.Debug|x86.Build.0 = Debug|x86
+		{9660FEEC-6DEC-46E8-A9E5-7E1F72D59C9D}.Release|Any CPU.ActiveCfg = Release|x86
+		{9660FEEC-6DEC-46E8-A9E5-7E1F72D59C9D}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{9660FEEC-6DEC-46E8-A9E5-7E1F72D59C9D}.Release|Mixed Platforms.Build.0 = Release|x86
+		{9660FEEC-6DEC-46E8-A9E5-7E1F72D59C9D}.Release|x86.ActiveCfg = Release|x86
+		{9660FEEC-6DEC-46E8-A9E5-7E1F72D59C9D}.Release|x86.Build.0 = Release|x86
+		{458DA8A8-4079-4A3F-87B4-84169163E663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{458DA8A8-4079-4A3F-87B4-84169163E663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{458DA8A8-4079-4A3F-87B4-84169163E663}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{458DA8A8-4079-4A3F-87B4-84169163E663}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{458DA8A8-4079-4A3F-87B4-84169163E663}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{458DA8A8-4079-4A3F-87B4-84169163E663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{458DA8A8-4079-4A3F-87B4-84169163E663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{458DA8A8-4079-4A3F-87B4-84169163E663}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{458DA8A8-4079-4A3F-87B4-84169163E663}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{458DA8A8-4079-4A3F-87B4-84169163E663}.Release|x86.ActiveCfg = Release|Any CPU
+		{E44C467C-8951-4569-B0AF-16EF5DDF7092}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{E44C467C-8951-4569-B0AF-16EF5DDF7092}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{E44C467C-8951-4569-B0AF-16EF5DDF7092}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{E44C467C-8951-4569-B0AF-16EF5DDF7092}.Debug|x86.ActiveCfg = Debug|x86
+		{E44C467C-8951-4569-B0AF-16EF5DDF7092}.Debug|x86.Build.0 = Debug|x86
+		{E44C467C-8951-4569-B0AF-16EF5DDF7092}.Release|Any CPU.ActiveCfg = Release|x86
+		{E44C467C-8951-4569-B0AF-16EF5DDF7092}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{E44C467C-8951-4569-B0AF-16EF5DDF7092}.Release|Mixed Platforms.Build.0 = Release|x86
+		{E44C467C-8951-4569-B0AF-16EF5DDF7092}.Release|x86.ActiveCfg = Release|x86
+		{E44C467C-8951-4569-B0AF-16EF5DDF7092}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,10 @@
+﻿<Window x:Class="SimpleTerrarium.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="300" Width="300">
+    <Viewbox>
+            <Canvas Name="WorldCanvas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Height="100">
+            <Label Content="A" Canvas.Left="57" Canvas.Top="51"></Label>
+        </Canvas>
+    </Viewbox>
+</Window>

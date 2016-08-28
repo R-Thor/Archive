@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightSnake", "SilverlightSnake\SilverlightSnake.csproj", "{084F4A93-4E9A-412B-93C4-D04099E0DD95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightSnake.Web", "SilverlightSnake.Web\SilverlightSnake.Web.csproj", "{4087C704-581C-4C61-8DB5-50609FE5108C}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://rthor-pc:8080/tfs/test
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SilverlightSnake.Web\\SilverlightSnake.Web.csproj
+		SccProjectName1 = SilverlightSnake.Web
+		SccLocalPath1 = SilverlightSnake.Web
+		SccProjectUniqueName2 = SilverlightSnake\\SilverlightSnake.csproj
+		SccProjectName2 = SilverlightSnake
+		SccLocalPath2 = SilverlightSnake
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{084F4A93-4E9A-412B-93C4-D04099E0DD95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{084F4A93-4E9A-412B-93C4-D04099E0DD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{084F4A93-4E9A-412B-93C4-D04099E0DD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{084F4A93-4E9A-412B-93C4-D04099E0DD95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4087C704-581C-4C61-8DB5-50609FE5108C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4087C704-581C-4C61-8DB5-50609FE5108C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4087C704-581C-4C61-8DB5-50609FE5108C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4087C704-581C-4C61-8DB5-50609FE5108C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

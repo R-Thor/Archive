@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Batch>
+  <Transactions>
+    <Transaction Date="1/2/2014" Account="Wells Fargo Paycheck Art" Amount="1000.00" DebitCredit="Debit" Note="Wells Fargo Paycheck Art" />
+    <Transaction Date="1/2/2014" Account="ReceivablesAccount" Amount="1000.00" DebitCredit="Credit" Note="Wells Fargo Paycheck Art" />
+    <Transaction Date="1/2/2014" Account="ReceivablesAccount" Amount="50.00" DebitCredit="Debit" Note="Allocation Savings" />
+    <Transaction Date="1/2/2014" Account="Savings" Amount="50.00" DebitCredit="Credit" Note="Allocation Savings" />
+    <Transaction Date="1/2/2014" Account="ReceivablesAccount" Amount="50.00" DebitCredit="Debit" Note="Allocation HealthCare" />
+    <Transaction Date="1/2/2014" Account="HealthCare" Amount="50.00" DebitCredit="Credit" Note="Allocation HealthCare" />
+    <Transaction Date="1/2/2014" Account="ReceivablesAccount" Amount="50.00" DebitCredit="Debit" Note="Allocation Clothing" />
+    <Transaction Date="1/2/2014" Account="Clothing" Amount="50.00" DebitCredit="Credit" Note="Allocation Clothing" />
+    <!--<Allocations>
+      <Allocation Account="CheckingAccount" Amount="" DebitCredit=""></Allocation>
+      <Allocation Account="Savings" Amount="" DebitCredit=""></Allocation>
+      <Allocation Account="AutoMaintainance" Amount="" DebitCredit=""></Allocation>
+      <Allocation Account="AutoTaxes" Amount="" DebitCredit=""></Allocation>
+      <Allocation Account="HealthCare" Amount="" DebitCredit=""></Allocation>
+      <Allocation Account="Gifts" Amount="" DebitCredit=""></Allocation>
+      <Allocation Account="" Amount="" DebitCredit=""></Allocation>
+    </Allocations>-->
+    <!--<Balance Amount=""/>-->
+    <!--</Transaction>-->
+  </Transactions>
+  <BatchTransaction Type="Receivable">
+    <Transaction Date="1/2/2014" Account="/WellsFargoEmployment/Bonus" Amount="500.00" DebitCredit="Debit" Note="Wells Fargo Paycheck Art" />
+    <Transaction Date="1/2/2014" Account="/ConradBankAccounts/ReceivableAccount" Amount="500.00" DebitCredit="Credit" Note="Wells Fargo Paycheck Art">
+      <Allocations>
+        <Allocation Account="/ConradBankAccounts/ReceivableAccount/UnallocatedFunds" Amount="300.00" DebitCredit="Credit" />
+      </Allocations>
+    </Transaction>
+  </BatchTransaction>
+  <BatchTransaction Type="Receivable">
+    <Transaction Date="1/2/2014" Account="/WellsFargoEmployment/Paycheck" Amount="1000.00" DebitCredit="Debit" Note="Wells Fargo Paycheck Art" />
+    <Transaction Date="1/2/2014" Account="/ConradBankAccounts/ReceivableAccount" Amount="1000.00" DebitCredit="Credit" Note="Wells Fargo Paycheck Art">
+      <Allocations>
+        <Allocation Account="/ConradBankAccounts/ReceivableAccount/UnallocatedFunds" Amount="2150.00" DebitCredit="Credit" />
+        <Allocation Account="/ConradBankAccounts/ReceivableAccount/AllocatedFunds" Amount="450.00" DebitCredit="Credit" />
+      </Allocations>
+    </Transaction>
+    <Transaction Date="1/2/2014" Account="/ConradBankAccounts/ReceivableAccount" Amount="400.00" DebitCredit="Debit" Note="Wells Fargo Paycheck Art">
+      <Allocations>
+        <Allocation Account="/ConradBankAccounts/ReceivableAccount/AllocatedFunds" Amount="400.00" DebitCredit="Debit" />
+      </Allocations>
+    </Transaction>
+    <Transaction Date="1/2/2014" Account="/ConradBankAccounts/ReceivableAccount" Amount="50.00" DebitCredit="Debit" Note="Wells Fargo Paycheck Art">
+      <Allocations>
+        <Allocation Account="/ConradBankAccounts/ReceivableAccount/AllocatedFunds" Amount="50.00" DebitCredit="Debit" />
+      </Allocations>
+    </Transaction>
+
+    <Transaction Date="1/2/2014" Account="/ConradBankAccounts/PayableAccount" Amount="400.00" DebitCredit="Credit" Note="Wells Fargo Paycheck Art">
+      <Allocations>
+        <Allocation Account="/ConradBankAccounts/PayableAccount/Spending" Amount="300" DebitCredit="Credit" />
+        <Allocation Account="/ConradBankAccounts/PayableAccount/HealthCare" Amount="50" DebitCredit="Credit" />
+        <Allocation Account="/ConradBankAccounts/PayableAccount/Clothing" Amount="50" DebitCredit="Credit" />
+      </Allocations>
+    </Transaction>
+    <Transaction Date="1/2/2014" Account="/ConradBankAccounts/PayableAccount" Amount="50.00" DebitCredit="Credit" Note="Wells Fargo Paycheck Art">
+      <Allocations>
+        <Allocation Account="/ConradBankAccounts/SavingsAccount/GeneralSavings" Amount="50" DebitCredit="Credit" />
+      </Allocations>
+    </Transaction>
+  </BatchTransaction>
+
+
+
+
+    <!--<Allocations>
+      <Allocation Account="CheckingAccount" Amount="" DebitCredit=""></Allocation>
+      <Allocation Account="Savings" Amount="" DebitCredit=""></Allocation>
+      <Allocation Account="AutoMaintainance" Amount="" DebitCredit=""></Allocation>
+      <Allocation Account="AutoTaxes" Amount="" DebitCredit=""></Allocation>
+      <Allocation Account="HealthCare" Amount="" DebitCredit=""></Allocation>
+      <Allocation Account="Gifts" Amount="" DebitCredit=""></Allocation>
+      <Allocation Account="" Amount="" DebitCredit=""></Allocation>
+    </Allocations>-->
+    <!--<Balance Amount=""/>-->
+    <!--</Transaction>-->
+  </BatchTransaction>
+</Batch>

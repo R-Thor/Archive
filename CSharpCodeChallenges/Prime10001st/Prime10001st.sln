@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prime10001st", "Prime10001st\Prime10001st.csproj", "{13B05177-8190-4B9D-BB8B-D55DDB250115}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://localhost:8080/tfs/sandbox
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Prime10001st\\Prime10001st.csproj
+		SccProjectName1 = Prime10001st
+		SccLocalPath1 = Prime10001st
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13B05177-8190-4B9D-BB8B-D55DDB250115}.Debug|x86.ActiveCfg = Debug|x86
+		{13B05177-8190-4B9D-BB8B-D55DDB250115}.Debug|x86.Build.0 = Debug|x86
+		{13B05177-8190-4B9D-BB8B-D55DDB250115}.Release|x86.ActiveCfg = Release|x86
+		{13B05177-8190-4B9D-BB8B-D55DDB250115}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BruteCash.Transaction">
+    <Position X="6.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TransactionsFirst\Transaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BruteCash.Allocation">
+    <Position X="6.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAGAAAAAAAABAAAAAAAAAEA=</HashCode>
+      <FileName>TransactionsFirst\Allocation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BruteCash.Account">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TransactionsFirst\Account.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="BruteCash.TransactionSet">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TransactionsFirst\TransactionSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BruteCash.Batch">
+    <Position X="6.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TransactionsFirst\Batch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BruteCash.BankAccountInformation">
+    <Position X="0.5" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAQAAAAAI=</HashCode>
+      <FileName>TransactionsFirst\BankAccount.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="BruteCash.IAccountInformation">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>TransactionsFirst\IAccountInfo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="BruteCash.ACCOUNT_TYPE">
+    <Position X="9.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAACAAAAAACAAAAAAAADAAAACACgAAAAAEA=</HashCode>
+      <FileName>TransactionsFirst\AccountType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
